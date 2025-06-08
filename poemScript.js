@@ -55,10 +55,7 @@ if(poemName){
 
 function loadDocx(fileTitle,filePath){
 	fetch(filePath).then(res=>res.arrayBuffer()).then(arrayBuffer=>mammoth.convertToHtml({ arrayBuffer })).then(result => {
-	  const poemContent =document.createElement("p");
-	  poemContent.classList.add("poem-body")
-	  poemContent.textContent=result.value;
-      viewer.innerHTML = `<h2 class="primary-text">${fileTitle}</h2><br>${result.value}`;
+      viewer.innerHTML = `<div class="poem-body">${result.value}</div>`;
     })
     .catch(err => {
       viewer.innerHTML = `<p style="color:red;">Error loading story: ${err.message}</p>`;

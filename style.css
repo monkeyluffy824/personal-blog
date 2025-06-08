@@ -141,7 +141,6 @@ sl-card::part(footer) {
 	background-color: #FFFBF3;
     display: grid;
     grid-template-columns: 1fr;
-    height:700px;
 }
 
 .poems-alignment{
@@ -156,7 +155,6 @@ sl-card::part(footer) {
 	background-color: #FFFBF3;
     display: grid;
     grid-template-columns: 1fr;
-    height:700px;
 }
 
 .sub-story-body{
