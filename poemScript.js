@@ -57,7 +57,7 @@ function loadDocx(fileTitle,filePath){
 	fetch(filePath).then(res=>res.arrayBuffer()).then(arrayBuffer=>mammoth.convertToHtml({ arrayBuffer })).then(result => {
 	  const poemContent =document.createElement("p");
 	  poemContent.classList.add("poem-body")
-	  poemContent=result.value;
+	  poemContent.Textarea=result.value;
       viewer.innerHTML = `<h2 class="primary-text">${fileTitle}</h2><br>${poemContent}`;
     })
     .catch(err => {
