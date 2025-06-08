@@ -58,7 +58,9 @@ function loadDocx(fileTitle,filePath){
 	  const poemContent =document.createElement("p");
 	  poemContent.classList.add("poem-body")
 	  poemContent.textContent=result.value;
-      viewer.appendChild(`<h2 class="primary-text">${fileTitle}</h2><br>${poemContent}`);
+	  const mainContent=document.createElement("p");
+	  mainContent.textContent=`<h2 class="primary-text">${fileTitle}</h2><br>${poemContent}`;
+      viewer.appendChild(mainContent);
     })
     .catch(err => {
       viewer.innerHTML = `<p style="color:red;">Error loading story: ${err.message}</p>`;
