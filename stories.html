@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/shoelace-autoloader.js"></script>
+    <link rel="stylesheet" media="(prefers-color-scheme:light)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/light.css" />
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(prefers-color-scheme:dark)" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.20.1/cdn/themes/dark.css" onload="document.documentElement.classList.add('sl-theme-dark');" />
+	<script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+</head>'
+<body>
+	<sl-card class="card-basic">
+  <div slot="header" class="leaf-header">
+    <h2 class="site-name">
+       Leaves
+    </h2>
+    <div slot="items">
+      <div variant="text" label="Alignment" class='btn-lst'>
+        <sl-button variant="text" class='btn-cls' onclick="viewHome()">Home</sl-button>
+        <sl-button variant="text" class='btn-cls' onclick="viewPoems()">Poems</sl-button>
+        <sl-button variant="text" class='btn-cls' onclick="viewStories()">Stories</sl-button>
+        <sl-button variant="text" class='btn-cls' onclick="navigateAboutMe()">About Me</sl-button>
+      </div>
+    </div>
+  </div>
+  <div class="sub-story">
+	<h3 class="primary-text stories-alignment">Stories</h3>
+    <div id="story-list" class="sub-story-body"></div>
+    <div id="story-viewer" class="stories-alignment"></div>
+  </div>
+   
+</sl-card>
+<script src="storiesScript.js"></script>
+</body>
