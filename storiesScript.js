@@ -27,6 +27,7 @@ if(storyName){
 }
 
 function loadDocx(fileTitle,filePath){
+	viewer.innerHTML='<sl-spinner style="font-size: 3rem; justify-self:center;"></sl-spinner>';
 	fetch(filePath).then(res=>res.arrayBuffer()).then(arrayBuffer=>mammoth.convertToHtml({ arrayBuffer })).then(result => {
       viewer.innerHTML = `<div class="stor-body">${result.value}</div>`;
     })
