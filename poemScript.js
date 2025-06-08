@@ -54,6 +54,7 @@ if(poemName){
 }
 
 function loadDocx(fileTitle,filePath){
+	viewer.innerHTML='<sl-spinner style="font-size: 3rem;"></sl-spinner>';
 	fetch(filePath).then(res=>res.arrayBuffer()).then(arrayBuffer=>mammoth.convertToHtml({ arrayBuffer })).then(result => {
       viewer.innerHTML = `<div class="poem-body">${result.value}</div>`;
     })
