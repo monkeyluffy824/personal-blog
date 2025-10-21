@@ -1,5 +1,6 @@
 const stories=[
 	{ title: "Judgement Day", file: "stories/Judgement Day.docx" },
+	{ title: "Story By Letters", file: "stories/A psychological thriller.docx" }
 ]
 
 
